@@ -2,6 +2,7 @@ import pytest
 
 from tennis import score_tennis
 
+#this allows you to set test perameters for the test cases that would otherwise be used. It allows the same tests to be succintly created without as much code needed
 
 @pytest.mark.parametrize("player1_points, player2_points, expected_score",
                          [(0, 0, "Love-All"),
