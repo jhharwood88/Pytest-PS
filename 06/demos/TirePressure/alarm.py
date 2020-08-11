@@ -4,6 +4,7 @@ from sensor import Sensor
 class Alarm:
 
     def __init__(self, sensor=None):
+        #sensor is made into an optinal arugment so that anything else using the sensor argument wont break
         self._low_pressure_threshold = 17
         self._high_pressure_threshold = 21
         self._sensor = sensor or Sensor()

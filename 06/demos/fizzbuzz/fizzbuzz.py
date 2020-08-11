@@ -25,3 +25,5 @@ def fizzbuzz(n, additional_rules=None):
     if not answer:
         answer = str(n)
     return answer
+
+#This makes use of the docstirng to pass test results to the player, but with the aditional rules it lets the player know by making use of the dummy information. For the most park, dummies are none or empty values. Dummys can arguably not be considered test objects as they have no value, but are used when forced to pass an arguemnt to the test.
