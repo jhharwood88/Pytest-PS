@@ -4,6 +4,7 @@ class TelemetryDiagnosticControls:
     def __init__(self, client=None):
         self.telemetry_client = client or TelemetryClient()
         self.diagnostic_info = ""
+        #the client=none means it wont affect existing clients of the constructor, will use it instead of creating a new client 
 
     def check_transmission(self):
         self._reconnect()
@@ -22,7 +23,7 @@ class TelemetryDiagnosticControls:
             retries_left -= 1
         if not self.telemetry_client.get_online_status():
             raise Exception("Unable to connect.")
-
+    #Split 3 seperate functions into 3 new mehtods to better allow for testing each individaul action, check transmission, send and recieve, and reconnect are all now able to be tested individually rather than desigining multiple tests for the orgininal check transmission method.
 
 class TelemetryClient:
     DIAGNOSTIC_MESSAGE = "AT#UD"
