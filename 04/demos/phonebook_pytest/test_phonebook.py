@@ -2,6 +2,7 @@ import pytest
 
 from phonebook import Phonebook
 
+#pytest has a good amount of detail built in with the assertion testing, showing specifically where the test failed and how it failed. It has good reporting for test failures that make it much easier to interpret tests. Pycharm has a built in test runner for testing to be able to automate testing arguments rather than manually calling them from the terminal. There are aditional information sources available through pycharm.
 
 @pytest.fixture
 def phonebook(tmpdir):
